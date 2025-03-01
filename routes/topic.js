@@ -81,9 +81,6 @@ router.post('/create_process', (req,res)=>{
     var description = post.description;
     fs.writeFile(`data/${name}`,description,'utf8',function(err){
         res.redirect(`/topic/${name}`);
-        // res.end();
-        // res.writeHead(302,{Location: `/page/${name}`});
-        // res.end();
     });
 })
 
